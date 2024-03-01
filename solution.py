@@ -5,7 +5,7 @@ import statistics
 
 INPUT_FILE_PATH = 'test_data.json'
 OUTPUT_FILE_PATH = 'output_data.json'
-WEIGHTS_DEFAULTS = {'intelligence': 0.25, 'endurance': 0.25, 'strength': 0.25, 'spicyFoodTolerance': 0.25}  # Can adjust base weight for each attribute by org needs
+WEIGHTS_DEFAULTS = {'intelligence': 0.45, 'endurance': 0.40, 'strength': 0.10, 'spicyFoodTolerance': 0.05}  # Can adjust base weight for each attribute by org needs
 
 def calculate_team_statistics(team_data):
     # Calculate the mean and variance for each attribute of the team
@@ -51,8 +51,14 @@ def calculate_team_attribute_weights(team_stats):
     return weights
 
 def calculate_applicant_compatibility(applicant_data, weights):
-    # Measure invididual applicant against team and compatibility
-    pass
+    # Measure invididual applicant against team weights to generate compatibility score from 0.0 - 1.0
+    # Individual scores are normalized to scale, multiplied by the team's weight, and summed to make a final score.
+
+    c_score = 0
+    for attr, weight in weights.items():
+        attr_score = applicant_data['attributes'][attr] / 10    # normalize to 0.0-1.0 score scale
+        c_score += attr_score * weight
+    return c_score
 
 
 def main():
@@ -73,14 +79,19 @@ def main():
 
     applicant_compatibility_scores = {"scoredApplicants":[]}
 
-    #for applicant in applicants_data:
-     #   c_score = calculate_applicant_compatibility(applicant, team_weights)
-      #  scored_app = {'name':applicant['name'], 'score':[c_score]}
-       # applicant_compatibility_scores['scoredApplicants'].append(scored_app)
+    for applicant in applicants_data:
+        c_score = calculate_applicant_compatibility(applicant, team_weights)
+        scored_app = {'name':applicant['name'], 'score':c_score}
+        applicant_compatibility_scores['scoredApplicants'].append(scored_app)
+    
+    # Finally, convert applicant scores back to JSON and overwrite the output file
+    with open(OUTPUT_FILE_PATH, 'w') as output_file:
+        json.dump(applicant_compatibility_scores, output_file, indent=4)
 
     print("Team Data", team_data)
-    print("Applicants Data", applicants_data)
     print("Team Stats", team_stats)
+    print("Team Weights", team_weights)
+    print("Applicants Data", applicants_data)
     print("Scored Applicants", applicant_compatibility_scores)
 
 if __name__ == '__main__':
