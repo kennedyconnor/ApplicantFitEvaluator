@@ -49,8 +49,9 @@ The program then refines this approach by examining the team's data, guided by t
 
 1. A higher mean score in an attribute suggests its greater relative importance to the team.
 2. Lower variance in an attribute suggests its significance.
-For instance, a team characterized by a high average and low variance in intelligence would, in theory, be a team that priorites not only overall intelligence, but intelligence in all members. Therefore intelligence will have its default weight increased accordingly. In contrast, a lower average and higher variance in an attribute like strength would signal its lesser relevance, and its weight would be decreased.
+
+A team characterized by a high average and low variance in intelligence would, in theory, be a team that priorites not only overall team intelligence, but intelligence in each member. Therefore intelligence will have its default weight increased accordingly. In contrast, a lower average and higher variance in an attribute like strength would signal its lesser relevance, and its weight would be decreased.
 
 It's important to note that the solution is tailored to identify applicants who are most "compatible" with a team, interpreted as matching the team's existing scores. My assumption is that a given team already functions well, and we want an applicant who matches its members.
 
-An alternative perspective, which could be an interesting avenue for further exploration, involves using applicants to "fill the gaps" in a team's skillset. This potential expansion of functionality would shift the focus from compatibility to complementarity.
+An alternative perspective, which could be interesting for further exploration, involves using applicants to "fill the gaps" in a team's skillset. This potential expansion of functionality would shift the focus from compatibility to complementarity.
