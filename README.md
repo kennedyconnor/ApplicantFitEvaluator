@@ -48,7 +48,7 @@ I designed my approach to blend intuitive and statistical analysis of team membe
 The program then refines this approach by examining the team's data, guided by two assumptions:
 
 1. A higher mean score in an attribute suggests its greater relative importance to the team.
-2. Lower variance in an attribute suggests its significance.
+2. Lower variance in an attribute suggests its significance to each individual member.
 
 A team characterized by a high average and low variance in intelligence would, in theory, be a team that prioritizes not only overall team intelligence, but intelligence in each member. Therefore intelligence will have its default weight increased accordingly. In contrast, a lower average and higher variance in an attribute h would signal its lesser relevance, and its weight would be decreased.
 
