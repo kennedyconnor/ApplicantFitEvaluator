@@ -40,7 +40,7 @@
 ## Running the Application
 - Requires Python.
 - Run `python solution.py`.
-- Input and output file paths are configurable. By default, they are located in the same directory as solution.py
+- Input and output file paths are configurable. By default, they are located in the same directory as solution.py.
 
 ## Approach/Premise
 I designed my approach to blend intuitive and statistical analysis of team members and applicants. The initial `WEIGHTS_DEFAULT` values set an intuitive benchmark for team analysis. Relying solely on statistical measures might disproportionately emphasize outliers (like Joe). These default weights serve as a balance, grounding the analysis in our understanding of what a 'strong' applicant generally is, and can be changed depending on recruiter needs.
@@ -50,7 +50,7 @@ The program then refines this approach by examining the team's data, guided by t
 1. A higher mean score in an attribute suggests its greater relative importance to the team.
 2. Lower variance in an attribute suggests its significance.
 
-A team characterized by a high average and low variance in intelligence would, in theory, be a team that priorites not only overall team intelligence, but intelligence in each member. Therefore intelligence will have its default weight increased accordingly. In contrast, a lower average and higher variance in an attribute like strength would signal its lesser relevance, and its weight would be decreased.
+A team characterized by a high average and low variance in intelligence would, in theory, be a team that prioritizes not only overall team intelligence, but intelligence in each member. Therefore intelligence will have its default weight increased accordingly. In contrast, a lower average and higher variance in an attribute h would signal its lesser relevance, and its weight would be decreased.
 
 It's important to note that the solution is tailored to identify applicants who are most "compatible" with a team, interpreted as matching the team's existing scores. My assumption is that a given team already functions well, and we want an applicant who matches its members.
 
