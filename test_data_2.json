@@ -1,0 +1,28 @@
+{
+    "team": [
+      {"name": "Eddie", "attributes": {"intelligence": 2, "strength": 6, "endurance": 3, "spicyFoodTolerance": 4}},
+      {"name": "Will", "attributes": {"intelligence": 8, "strength": 5, "endurance": 2, "spicyFoodTolerance": 7}},
+      {"name": "Mike", "attributes": {"intelligence": 5, "strength": 3, "endurance": 8, "spicyFoodTolerance": 5}},
+      {"name": "Anna", "attributes": {"intelligence": 6, "strength": 4, "endurance": 5, "spicyFoodTolerance": 6}},
+      {"name": "Tom", "attributes": {"intelligence": 7, "strength": 2, "endurance": 4, "spicyFoodTolerance": 3}},
+      {"name": "Lucy", "attributes": {"intelligence": 4, "strength": 7, "endurance": 6, "spicyFoodTolerance": 2}},
+      {"name": "Rachel", "attributes": {"intelligence": 3, "strength": 5, "endurance": 7, "spicyFoodTolerance": 4}},
+      {"name": "Bob", "attributes": {"intelligence": 6, "strength": 4, "endurance": 3, "spicyFoodTolerance": 5}}
+    ],
+    "applicants": [
+      {"name": "John", "attributes": {"intelligence": 3, "strength": 5, "endurance": 2, "spicyFoodTolerance": 1}},
+      {"name": "Jane", "attributes": {"intelligence": 7, "strength": 4, "endurance": 3, "spicyFoodTolerance": 2}},
+      {"name": "Joe", "attributes": {"intelligence": 1, "strength": 1, "endurance": 1, "spicyFoodTolerance": 10}},
+      {"name": "Sarah", "attributes": {"intelligence": 6, "strength": 6, "endurance": 4, "spicyFoodTolerance": 3}},
+      {"name": "Alex", "attributes": {"intelligence": 5, "strength": 3, "endurance": 7, "spicyFoodTolerance": 4}},
+      {"name": "Emily", "attributes": {"intelligence": 4, "strength": 4, "endurance": 5, "spicyFoodTolerance": 6}},
+      {"name": "David", "attributes": {"intelligence": 2, "strength": 7, "endurance": 6, "spicyFoodTolerance": 5}},
+      {"name": "Sophia", "attributes": {"intelligence": 9, "strength": 2, "endurance": 3, "spicyFoodTolerance": 7}},
+      {"name": "Megan", "attributes": {"intelligence": 6, "strength": 5, "endurance": 4, "spicyFoodTolerance": 3}},
+      {"name": "Oliver", "attributes": {"intelligence": 3, "strength": 6, "endurance": 5, "spicyFoodTolerance": 2}},
+      {"name": "Charlotte", "attributes": {"intelligence": 8, "strength": 3, "endurance": 2, "spicyFoodTolerance": 6}},
+      {"name": "James", "attributes": {"intelligence": 4, "strength": 4, "endurance": 7, "spicyFoodTolerance": 5}},
+      {"name": "Lily", "attributes": {"intelligence": 5, "strength": 5, "endurance": 6, "spicyFoodTolerance": 4}}
+    ]
+  }
+  

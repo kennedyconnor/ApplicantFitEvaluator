@@ -68,7 +68,7 @@ def main():
         with open((INPUT_FILE_PATH), 'r') as data_file:
             data = json.load(data_file)
     except FileNotFoundError:
-        print(f"{INPUT_FILE_PATH} was not found.")
+        print(f"Input JSON file {INPUT_FILE_PATH} was not found.")
         return None
     
     # Define key data for team and applicants
@@ -85,8 +85,12 @@ def main():
         applicant_compatibility_scores['scoredApplicants'].append(scored_app)
     
     # Finally, convert applicant scores back to JSON and overwrite the output file
-    with open(OUTPUT_FILE_PATH, 'w') as output_file:
-        json.dump(applicant_compatibility_scores, output_file, indent=4)
+    try:
+        with open(OUTPUT_FILE_PATH, 'w') as output_file:
+            json.dump(applicant_compatibility_scores, output_file, indent=4)
+    except FileNotFoundError:
+        print(f"Output JSON file {INPUT_FILE_PATH} was not found.")
+        return None
 
     print("Team Data", team_data)
     print("Team Stats", team_stats)
